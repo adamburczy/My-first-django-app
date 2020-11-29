@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet"  href="{%  static  'todo/base.css'  %}">
+    <style>
+
+h1 {
+text-align: center;
+}
+
+form {
+    overflow:hidden;
+    position: absolute;
+    top: 250px;
+    left: 580px;
+    padding-bottom: 40px;
+}
+
+form p {
+    width:100%;
+    overflow:hidden;
+}
+
+label {
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px;
+}
+input, textarea {
+    clear:both;
+    float:left;
+    margin:0 0 10px;
+    background:#efefef;
+    border:0;
+    padding:6px 10px;
+    font-size:14px;
+}
+
+
+input[type=submit], a.button {
+    font-weight:bold;
+    background:#e86464;
+    color:#fff;
+    padding:10px 20px;
+    font-size:14px;
+    text-transform:uppercase;
+    position: absolute;
+    top: 180px;
+    left: 40px;
+    }
+    </style>
+</head>
+
+<body>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<h1>ToDo<span style="color:#e86464">APP</span></h1>
+<form id="login-form" method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+    <input class="button" type="submit" value="Log in">
+</form>
+</body>
+</html>

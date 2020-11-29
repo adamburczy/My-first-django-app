@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Your Task{% endblock %}
+
+{% block content %}
+
+<h1>{{ task.title }}</h1>
+<p>{{ task.notes|truncatewords:40 }}</p>
+<p>Finish this task to {{ task.deadline }}</p>
+    <a href="{% url 'task_delete' task.title %}">Delete Task</a>
+
+
+{% endblock %}

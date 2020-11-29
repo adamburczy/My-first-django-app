@@ -1,0 +1,41 @@
+body {
+  background-color: #516572;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+    max-width: 2000px;
+    max-height: 1500px;
+  margin: auto;
+  background: #516572;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#left {
+           float:left;
+           background-imag--: url("multitasking.svg");
+           background; #516572;
+           width:40%;
+           height:650px;
+            }
+#right {
+             float:left;
+             background: #8cabdb;
+             width:60%;
+             height:650px;
+             font-family: Trebuchet MS, sans-serif;
+             font-size: 65px;
+             text-align: center;
+             position: relative;
+             padding: 0px;
+}
+
+h1 {
+    color: #162e3d;
+    font-size: 65px;
+    padding: 100px;
+}
+
+

@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        .forma{
+            width: 40%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-37%, -45%);
+        }
+
+        body {
+            background-image: linear-gradient(to right, #39596e , #8cabdb);
+        }
+
+        #button {
+	box-shadow: 3px 4px 0px 0px #e87272;
+	background-color:#e86464;
+	border-radius:2px;
+	display:inline-block;
+	cursor:pointer;
+	color:#213a4a;
+	font-family:Noto Sans, sans-serif;
+	font-size:23px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	padding:6px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+	position:relative;
+	top:10px;
+	left: 110px;
+}
+#button:hover {
+	background:linear-gradient(to bottom, #e84f4f 5%, #e84f4f 100%);
+	background-color:#e84f4f;
+}
+
+h1 {
+    color: #162e3d;
+    font-size: 65px;
+    text-align: center;
+    position: absolute;
+    top: 30px;
+    left: 450px;
+    font-family:helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+    </style>
+</head>
+
+<body>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'tasks_all' %}">wróć na stronę główną></a>
+{% endif %}
+<h1>ToDoApp<span style="color:#e86464">BETA</span></h1>
+<form class="forma" action="" method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <a href="{% url 'tasks_all' %}"><input id="button" type="submit" value="Add Task"></a>
+</form>
+</body>
+</html>

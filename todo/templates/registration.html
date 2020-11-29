@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet"  href="{%  static  'todo/login.css'  %}">
+        <style>
+                body {
+                    font-family:helvetica, sans-serif;
+                    background-image: linear-gradient(to right, #39596e , #8cabdb);
+                }
+
+                #havegot {
+                    font-size: 14px;
+                }
+
+                .wrapper {
+                    text-align: center;
+                    position: relative;
+                    left: 160px;
+                    top: -60px;
+                }
+
+                a {
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+
+
+
+
+                #sologin {
+                    color: white;
+                }
+
+                h1 {
+                color: #162e3d;
+                font-size: 65px;
+                text-align: center;
+                position: relative;
+                top: 30px;
+                }
+
+                #register {
+                    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+                }
+        </style>
+</head>
+
+<body>
+<div id="container">
+    <h1>ToDoApp<span style="color:#e86464">BETA</span></h1>
+<form id="register" action="{% url 'register' %}" method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <a href="{% url 'register' %}"><input class="button2" type="submit" value="Sign up"></a>
+    <div class="wrapper">
+    <div id="havegot">
+         Have you got an account?
+    </div>
+    <div id="sologin">
+        <a href="{% url 'login' %}">Log in</a>
+    </div>
+    </div>
+</form>
+</div>
+</body>
+</html>

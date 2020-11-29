@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet"  href="{%  static  'todo/base.css'  %}">
+
+    <style>
+        #button {
+        	box-shadow: 3px 4px 0px 0px #e87272;
+	background-color:#e86464;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#213a4a;
+	font-family:Noto Sans, sans-serif;
+	font-size:30px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+	position:relative;
+	top:-35px;
+        }
+
+    #button:hover {
+	background:linear-gradient(to bottom, #e84f4f 5%, #e84f4f 100%);
+	background-color:#e84f4f;
+}
+
+     #button2 {
+     	box-shadow: 3px 4px 0px 0px #e87272;
+	background-color:#e86464;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#213a4a;
+	font-family:Noto Sans, sans-serif;
+	font-size:30px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+	position:relative;
+	top:-35px;
+	position: absolute;
+	top: 550px;
+	left: 170px;
+     }
+
+     #button2:hover {
+	background:linear-gradient(to bottom, #e84f4f 5%, #e84f4f 100%);
+	background-color:#e84f4f;
+}
+
+    #right {
+    height: 657px;
+    }
+    </style>
+
+</head>
+
+<body>
+<div id="container">
+
+    <div id="left">
+        <img id="leftimg"
+    src="{% static 'todo/multitasking.svg' %}"
+    alt="triangle with all three sides equal"
+    height="400"
+    width="550" />
+        <span id="youcan" >
+        <p>if you have got account, <br> you can log in:</p>
+        </span>
+        <a href="{% url 'login' %}" id="button2">Log in</a>
+    </div>
+
+    <div id="right">
+        <h1>ToDo<span style="color:#e86464">APP</span></h1>
+        <span id="desc">
+        <p>Organise your task,<br> in very fast and simple way.<br> Start today, by signing up:</p>
+        </span>
+        <a href="{% url 'register' %}" id="button">Sign up</a>
+    </div>
+
+</div>
+
+</body>
+</html>

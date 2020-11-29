@@ -1,0 +1,188 @@
+
+p {
+    line-height: 1.8;
+}
+
+a {
+    color:#12c064;
+    text-decoration:none;
+}
+
+a:hover {
+    color:#00a74f;
+}
+
+body {
+  background-color: #516572;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+    max-width: 2000px;
+    max-height: 1500px;
+  margin: auto;
+  background: #516572;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#left {
+           float:left;
+           background-imag--: url("multitasking.svg");
+           background; #516572;
+           width:40%;
+           height:655px;
+            }
+#right {
+             float:left;
+             background: #8cabdb;
+             width:60%;
+             height:650px;
+             font-family: Trebuchet MS, sans-serif;
+             font-size: 65px;
+             text-align: center;
+             position: relative;
+             padding: 0px;
+}
+
+h1 {
+    color: #162e3d;
+    font-size: 65px;
+    padding: 100px;
+}
+
+
+.button {
+	box-shadow: 3px 4px 0px 0px #e87272;
+	background-color:#e86464;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#213a4a;
+	font-family:Noto Sans, sans-serif;
+	font-size:30px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+	position:relative;
+	top:-35px;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #e84f4f 5%, #e84f4f 100%);
+	background-color:#e84f4f;
+}
+
+
+.button2 {
+	box-shadow: 3px 4px 0px 0px #e87272;
+	background-color:#e86464;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#213a4a;
+	font-family:Noto Sans, sans-serif;
+	font-size:30px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+	position:relative;
+	top:30px;
+	left: 170px;
+}
+.button2:hover {
+	background:linear-gradient(to bottom, #e84f4f 5%, #e84f4f 100%);
+	background-color:#e84f4f;
+}
+
+#youcan {
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    font-family: "Lucida Console", Courier, monospace;
+    line-height: 25px;
+}
+
+#desc {
+font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: -65px;
+    font-family: "Lucida Console", Courier, monospace;
+    line-height: 25px;
+}
+
+/* forms */
+form {
+    overflow:auto;
+}
+
+form p {
+    width:100%;
+    overflow:auto;
+}
+
+label {
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px;
+}
+input, textarea {
+    clear:both;
+    float:left;
+    margin:0 0 10px;
+    background:#efefef;
+    border:0;
+    padding:6px 10px;
+    font-size:14px;
+}
+input[type=submit], a.button {
+    font-weight:bold;
+    background:#12c064;
+    color:#fff;
+    padding:10px 20px;
+    font-size:14px;
+    text-transform:uppercase;
+
+/* messages */
+ul.messages {
+    margin:10px 100px;
+    padding:0;
+    list-style-type:
+    none;
+}
+ul.messages li.success,
+ul.messages li.warning,
+ul.messages li.error,
+ul.messages li.info {
+    margin:0;
+    padding:14px 20px;
+    list-style:none;
+    color:#fff;
+}
+
+ul.messages li.success { background:#81ce81; }
+ul.messages li.success a { color:#0ac33e; }
+
+ul.messages li.error { background:#a30029; color:#e9828e; }
+ul.messages li.error a { color:#e9828e; }
+
+ul.messages li.info { background:#faffae; color:#696b4e; }
+ul.messages li.info a { color:#1586de; }
+
+ul.messages li.warning { background:#de9404; }
+ul.messages li.warning a { color:#f49000; }
+
+ul.messages li a.close {
+    margin:0;
+    float:right;
+    opacity:1;
+    border:0;
+    box-shadow:none;
+    text-shadow:none;
