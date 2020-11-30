@@ -91,6 +91,7 @@
 <p>Finish this task to {{ task.deadline }}</p>
     <a href="{% url 'task_delete' task.title %}">Delete Task</a><br><br>
     <a href="{% url 'task_detail' task.title %}">View task's details</a>
+    {{ task.status }}
 </div>
 {% endfor %}
 </div>
