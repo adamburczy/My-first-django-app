@@ -9,5 +9,5 @@
 <p>Finish this task to {{ task.deadline }}</p>
     <a href="{% url 'task_delete' task.title %}">Delete Task</a>
 
-
+    {{ task.status }}
 {% endblock %}

@@ -14,7 +14,8 @@ from django.contrib import messages
 @login_required
 def tasks_all(request):     # sortowanie po deadline
     tasks = Task.objects.all()
-    return render(request, 'tasks_all.html', {'tasks' : tasks})
+    status_ongoing = Task.objects.filter(status='ongoing')
+    return render(request, 'tasks_all.html', {'tasks' : tasks, 'status_ongoing': status_ongoing})
 
 @login_required
 def task_add(request):
